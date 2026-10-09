@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "scene.cozy-room.v1",
+  "backgroundAssetId": "background.cozy-room.v1",
+  "selected": "orange",
+  "idleGreeting": "橘白正在晒太阳。",
+  "actors": [
+    {
+      "id": "orange",
+      "assetId": "cat.c3.orange.v1",
+      "name": "橘白",
+      "description": "橘白伸了个懒腰，轻轻喵了一声。",
+      "x": 29,
+      "bottom": 13,
+      "duration": 4.2,
+      "delay": -1.8
+    },
+    {
+      "id": "british",
+      "assetId": "cat.c3.british.v1",
+      "name": "英短",
+      "description": "英短眨眨眼，好像还没睡醒。",
+      "x": 23,
+      "bottom": 39,
+      "duration": 4.8,
+      "delay": -3.1
+    },
+    {
+      "id": "ragdoll",
+      "assetId": "cat.c3.ragdoll.v1",
+      "name": "布偶",
+      "description": "布偶歪歪脑袋，想再陪你待一会儿。",
+      "x": 61,
+      "bottom": 33,
+      "duration": 4.5,
+      "delay": -0.9
+    },
+    {
+      "id": "siamese",
+      "assetId": "cat.c3.siamese.v1",
+      "name": "暹罗",
+      "description": "暹罗抬头看你：今天也要一起玩吗？",
+      "x": 82,
+      "bottom": 17,
+      "duration": 3.8,
+      "delay": -2.2
+    },
+    {
+      "id": "calico",
+      "assetId": "cat.c3.calico.v1",
+      "name": "三花",
+      "description": "三花晃了晃，悄悄凑近了一点。",
+      "x": 52,
+      "bottom": 7,
+      "duration": 4.6,
+      "delay": -0.4
+    }
+  ],
+  "svgActor": {
+    "id": "svg",
+    "assetId": "cat.svg.orange.v1",
+    "name": "SVG 猫",
+    "description": "SVG 猫也来晒太阳了。",
+    "x": 72,
+    "bottom": 5,
+    "duration": 4.3,
+    "delay": -1
+  }
+}

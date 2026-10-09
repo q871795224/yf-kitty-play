@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "cat.c3.orange.v1",
+      "name": "橘白",
+      "type": "raster",
+      "version": 1,
+      "path": "assets/cats/c3/v1/orange.png",
+      "sha256": "1725d0a10654fb2309a81c9aae0eda9a5a6269230a0b6b98c790da6175b6efea",
+      "dimensions": [
+        768,
+        768
+      ],
+      "mode": "RGBA",
+      "anchor": [
+        0.5,
+        0.91
+      ]
+    },
+    {
+      "id": "cat.c3.british.v1",
+      "name": "英短",
+      "type": "raster",
+      "version": 1,
+      "path": "assets/cats/c3/v1/british.png",
+      "sha256": "ffcabbdebb457c875a7a4388e751c2f0e4a6ec54448cd340a15132a289e4308f",
+      "dimensions": [
+        768,
+        768
+      ],
+      "mode": "RGBA",
+      "anchor": [
+        0.5,
+        0.91
+      ]
+    },
+    {
+      "id": "cat.c3.ragdoll.v1",
+      "name": "布偶",
+      "type": "raster",
+      "version": 1,
+      "path": "assets/cats/c3/v1/ragdoll.png",
+      "sha256": "94ad55e3c78219d3ff8d4e6517724edd04880ffd6860891c9bc2bd5f2e77b5a2",
+      "dimensions": [
+        768,
+        768
+      ],
+      "mode": "RGBA",
+      "anchor": [
+        0.5,
+        0.91
+      ]
+    },
+    {
+      "id": "cat.c3.siamese.v1",
+      "name": "暹罗",
+      "type": "raster",
+      "version": 1,
+      "path": "assets/cats/c3/v1/siamese.png",
+      "sha256": "7c8e8004f896d8eb148b1b2fe31b64bd578e98b2461bc4458f50ff6a755d2e35",
+      "dimensions": [
+        768,
+        768
+      ],
+      "mode": "RGBA",
+      "anchor": [
+        0.5,
+        0.91
+      ]
+    },
+    {
+      "id": "cat.c3.calico.v1",
+      "name": "三花",
+      "type": "raster",
+      "version": 1,
+      "path": "assets/cats/c3/v1/calico.png",
+      "sha256": "0d9cefbf0950e9d9cc553408558464d8c966fa486173287e5116678adbd82873",
+      "dimensions": [
+        768,
+        768
+      ],
+      "mode": "RGBA",
+      "anchor": [
+        0.5,
+        0.91
+      ]
+    },
+    {
+      "id": "cat.svg.orange.v1",
+      "name": "SVG 橘白猫",
+      "type": "svg",
+      "version": 1,
+      "path": "assets/cats/svg-sketch/v1/orange.svg",
+      "sha256": "d0c800800a157ad1db95a4692feeb88d63bda0208a1c606634827dc560c037b1",
+      "dimensions": [
+        768,
+        768
+      ],
+      "anchor": [
+        0.5,
+        0.91
+      ]
+    },
+    {
+      "id": "background.cozy-room.v1",
+      "name": "温馨小屋背景",
+      "type": "svg",
+      "version": 1,
+      "path": "assets/scenes/cozy-room/v1/room.svg",
+      "sha256": "6b2f033d13527ef46d46bd0e151f2c9d3d5c9553ec19da228bea1d72cf767efe",
+      "dimensions": [
+        1200,
+        760
+      ]
+    },
+    {
+      "id": "scene.cozy-room.v1",
+      "name": "温馨小屋摆放配置",
+      "type": "scene",
+      "version": 1,
+      "path": "assets/scenes/cozy-room/v1/scene.json",
+      "sha256": "b81f787163dffe2fb422b9aa28c8f54e96af5e041c45608a48bce50d2e502657",
+      "dependencies": [
+        "background.cozy-room.v1",
+        "cat.c3.orange.v1",
+        "cat.c3.british.v1",
+        "cat.c3.ragdoll.v1",
+        "cat.c3.siamese.v1",
+        "cat.c3.calico.v1",
+        "cat.svg.orange.v1"
+      ]
+    },
+    {
+      "id": "decoration.cozy-room.v1",
+      "name": "温馨小屋装饰组",
+      "type": "svg",
+      "version": 1,
+      "path": "assets/decorations/cozy-room/v1/items.svg",
+      "sha256": "497b609f4a7176b2783f6ce03b5efed946eca90de3909f7694e4a3911ceec4ff",
+      "dimensions": [
+        1200,
+        760
+      ],
+      "fragments": [
+        "cushion",
+        "plant",
+        "blanket"
+      ]
+    }
+  ]
+}

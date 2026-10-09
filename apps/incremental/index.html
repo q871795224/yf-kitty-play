@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f9f3e8">
+  <title>猫猫的小屋</title>
+  <link rel="icon" href="../../assets/cats/svg-sketch/v1/orange.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" type="module"></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="icon-heart" viewBox="0 0 48 48"><path d="M24 39C18 34 7 26 7 17c0-11 12-14 17-5 5-9 17-6 17 5 0 9-11 17-17 22Z" fill="#e9b899"/></symbol>
+      <symbol id="icon-cat" viewBox="0 0 48 48"><path d="m10 21-1-12 12 7h7l11-7-1 13c9 20-34 23-28-1Z" fill="#f2d3a1"/><path d="M17 25h1m12 0h1m-10 6q3 4 6 0M9 27l-5-2m5 7-5 1m35-6 5-2m-5 7 5 1" fill="none"/><path d="m22 28 2 2 2-2" fill="#a67e5a" stroke="none"/></symbol>
+      <symbol id="icon-invite" viewBox="0 0 48 48"><path d="M9 22h30v19H9Z" fill="#e7dfbf"/><path d="m5 23 19-17 19 17M20 41V28h9v13" fill="#f1c8a1"/><path d="M34 10v10m-5-5h10" fill="none"/></symbol>
+      <symbol id="icon-decor" viewBox="0 0 48 48"><path d="M15 28h21l-4 15H19Z" fill="#d9aa89"/><path d="M25 28V9m0 11 11-9m-11 14-12-8" fill="none"/><path d="M24 15C11 17 8 6 11 5c8-1 14 3 13 10Zm3 5c-1-9 7-14 14-11 0 7-6 12-14 11Z" fill="#a0af88"/></symbol>
+      <symbol id="icon-settings" viewBox="0 0 48 48"><path d="M10 13h28M10 24h28M10 35h28" fill="none"/><circle cx="19" cy="13" r="4" fill="#f4e1bd"/><circle cx="30" cy="24" r="4" fill="#aab592"/><circle cx="18" cy="35" r="4" fill="#e5b89d"/></symbol>
+      <symbol id="icon-close" viewBox="0 0 48 48"><path d="m15 15 18 18m0-18L15 33" fill="none"/></symbol>
+      <symbol id="icon-focus" viewBox="0 0 48 48"><circle cx="24" cy="24" r="11" fill="none"/><path d="M24 6v10m0 16v10M6 24h10m16 0h10" fill="none"/></symbol>
+    </defs>
+  </svg>
+  <main class="app-shell">
+    <header class="hud">
+      <div class="hud-heading"><h1>猫猫的小屋</h1><button class="icon-button" data-open="settings-sheet" aria-label="小屋设置" disabled><svg class="icon"><use href="#icon-settings"/></svg></button></div>
+      <div class="resource-pill" aria-label="暖心点和自动产量"><svg class="icon heart-icon" aria-hidden="true"><use href="#icon-heart"/></svg><strong id="points">0</strong><span class="resource-label">暖心点</span><span class="rate-pill">+<span id="rate">0.6</span> / 秒</span></div>
+    </header>
+    <section class="scene-viewport" id="scene-viewport" aria-label="可拖动的小屋，点击猫猫获得暖心点">
+      <div class="room" id="room">
+        <img class="room-background" alt="有阳光、沙发与木地板的温馨小屋" draggable="false">
+        <svg class="decoration-layer" viewBox="0 0 1200 760" aria-label="小屋装饰">
+          <g data-decoration="cushion" hidden><use data-decoration-use="cushion"/></g>
+          <g data-decoration="plant" hidden><use data-decoration-use="plant"/></g>
+          <g data-decoration="blanket" hidden><use data-decoration-use="blanket"/></g>
+        </svg>
+      </div>
+    </section>
+    <p id="greeting" class="sr-only" aria-live="polite">正在打开小屋……</p>
+    <div class="scene-tools"><button id="recenter" class="icon-button" aria-label="回到选中的猫猫" disabled><svg class="icon"><use href="#icon-focus"/></svg></button><span id="scene-hint">拖动看看小屋 · 轻轻摸摸猫</span></div>
+    <nav class="orbit-dock" aria-label="小屋操作">
+      <button class="dock-button" data-open="cat-sheet" aria-haspopup="dialog" disabled><span class="icon-circle"><svg class="icon"><use href="#icon-cat"/></svg></span><span>猫猫</span></button>
+      <button class="dock-button" data-open="invite-sheet" aria-haspopup="dialog" disabled><span class="icon-circle"><svg class="icon"><use href="#icon-invite"/></svg></span><span>迎接</span></button>
+      <button class="dock-button" data-open="decor-sheet" aria-haspopup="dialog" disabled><span class="icon-circle"><svg class="icon"><use href="#icon-decor"/></svg></span><span>布置</span></button>
+    </nav>
+    <div class="toast" id="toast" role="status" hidden></div>
+  </main>
+
+  <dialog id="cat-sheet" class="bottom-sheet" aria-labelledby="cat-sheet-title">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <header class="sheet-header"><h2 id="cat-sheet-title">陪陪猫猫</h2><button class="icon-button" data-close aria-label="关闭猫猫面板"><svg class="icon"><use href="#icon-close"/></svg></button></header>
+    <div class="sheet-body">
+      <div id="owned-cats" class="owned-cats" aria-label="选择已入住的猫"></div>
+      <section class="cat-detail" aria-labelledby="selected-name">
+        <img id="selected-image" alt=""><p class="eyebrow" id="selected-breed"></p><h2><span id="selected-name">橘白</span><span class="level" id="selected-level">猫窝 Lv.1</span></h2><p id="selected-note"></p><p class="detail-rate">每秒带来 <b id="selected-rate">0.6</b> 暖心点</p>
+        <button id="upgrade" class="primary-button" disabled>升级猫窝</button><p id="upgrade-gain" class="small-note"></p>
+        <button id="find-cat" class="text-button">回小屋看看它 →</button>
+      </section>
+    </div>
+  </dialog>
+  <dialog id="invite-sheet" class="bottom-sheet" aria-labelledby="invite-sheet-title">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <header class="sheet-header"><h2 id="invite-sheet-title">迎接新朋友 <small id="cats-tab-count">1/5</small></h2><button class="icon-button" data-close aria-label="关闭迎接面板"><svg class="icon"><use href="#icon-close"/></svg></button></header>
+    <div class="sheet-body"><div id="cat-list"></div></div>
+  </dialog>
+  <dialog id="decor-sheet" class="bottom-sheet" aria-labelledby="decor-sheet-title">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <header class="sheet-header"><h2 id="decor-sheet-title">布置小屋 <small id="decor-tab-count">0/3</small></h2><button class="icon-button" data-close aria-label="关闭布置面板"><svg class="icon"><use href="#icon-close"/></svg></button></header>
+    <div class="sheet-body"><div id="decor-list"></div><p class="decor-total">全屋产量加成 <b id="decor-bonus">+0%</b></p></div>
+  </dialog>
+  <dialog id="settings-sheet" class="bottom-sheet" aria-labelledby="settings-sheet-title">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <header class="sheet-header"><h2 id="settings-sheet-title">小屋日常</h2><button class="icon-button" data-close aria-label="关闭设置面板"><svg class="icon"><use href="#icon-close"/></svg></button></header>
+    <div class="sheet-body">
+      <section class="chapter"><div class="chapter-top"><span>第一章 · <span id="resident-count">1</span> 只猫的陪伴</span><span id="chapter-count">1 / 8</span></div><h3 id="chapter-title">让每一个角落，都有陪伴。</h3><div class="progress-track" role="progressbar" aria-label="小屋进度" aria-valuemin="0" aria-valuemax="8" aria-valuenow="1"><span id="chapter-progress"></span></div><p id="next-goal"></p></section>
+      <div class="settings-row"><span>猫猫的小动作</span><button id="motion-toggle" class="outlined-button" aria-pressed="false">暂停晃动</button></div>
+      <p id="save-status" class="small-note">进度自动保存 · 离线收益最多 8 小时</p><button id="reset" class="text-button reset-button">重新开始</button>
+    </div>
+  </dialog>
+  <dialog id="offline-dialog" class="paper-dialog" aria-labelledby="offline-title">
+    <form method="dialog"><p class="eyebrow">欢迎回家</p><h2 id="offline-title">猫猫替你攒了些暖意。</h2><p id="offline-duration"></p><div class="offline-reward">♡ <strong id="offline-amount">0</strong><span>暖心点</span></div><p class="small-note">已放进你的口袋，最多计算 8 小时。</p><button class="primary-button" autofocus>回去看看它们</button></form>
+  </dialog>
+  <dialog id="reset-dialog" class="paper-dialog" aria-labelledby="reset-title">
+    <form method="dialog"><h2 id="reset-title">从第一只橘白开始？</h2><p>这会清空暖心点、猫窝等级和小屋布置。</p><div class="dialog-actions"><button class="outlined-button" value="cancel" autofocus>继续陪它们</button><button class="primary-button" value="reset">确认重新开始</button></div></form>
+  </dialog>
+</body>
+</html>
