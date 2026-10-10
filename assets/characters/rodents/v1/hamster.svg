@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 256">
+<defs><pattern id="pencil" width="11" height="14" patternUnits="userSpaceOnUse"><path d="m1 12 8-6m-4-5 3-2" stroke="#9d866b" stroke-width=".7" opacity=".17"/></pattern></defs>
+<g stroke="#867361" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M174 192q17 5 14-7" fill="none" stroke="#c1a598" stroke-width="5"/><path d="M174 192q17 5 14-7" fill="none" stroke-width="1.5"/>
+<ellipse cx="69" cy="70" rx="21" ry="23" fill="#cfb398"/><ellipse cx="155" cy="70" rx="21" ry="23" fill="#cfb398"/>
+<ellipse cx="69" cy="72" rx="13.44" ry="13.860000000000001" fill="#e4bcb0" stroke="#bca18f" stroke-width="1.2"/><ellipse cx="155" cy="72" rx="13.44" ry="13.860000000000001" fill="#e4bcb0" stroke="#bca18f" stroke-width="1.2"/>
+<path d="M44 149C37 112 52 83 77 78Q112 61 153 81C179 92 191 130 181 161Q193 211 154 223Q113 235 70 222C33 211 31 182 44 149Z" fill="#cfb398"/>
+<path d="M50 153C45 122 59 90 79 83Q112 67 151 85" fill="none" stroke="#f4ead9" opacity=".7" stroke-width="3"/>
+<path d="M62 154q16-11 27 4 22 14 43 0 20-15 34-1 23 44-16 62-40 13-73-4-20-18-15-61Z" fill="#f4ead6" stroke="none"/>
+<path d="M65 106q19-26 39-33m20 0q26 8 43 35" fill="none" stroke="#a38666" stroke-width="4" opacity=".25"/>
+<path d="M46 159q16-10 27 12m179-12q-15-11-28 12" fill="none"/>
+<ellipse cx="80" cy="224" rx="17" ry="8" fill="#dcbcb0"/><ellipse cx="145" cy="224" rx="17" ry="8" fill="#dcbcb0"/>
+<path d="m77 221 1 6m8-5v5m54-5 1 6m8-6v5" stroke="#b58e82" stroke-width="1.2"/>
+<ellipse cx="85" cy="123" rx="5" ry="7" fill="#574939" stroke="none"/><ellipse cx="139" cy="123" rx="5" ry="7" fill="#574939" stroke="none"/>
+<circle cx="83.5" cy="121" r="1.7" fill="#fffaf0" stroke="none"/><circle cx="137.5" cy="121" r="1.7" fill="#fffaf0" stroke="none"/>
+<ellipse cx="71" cy="139" rx="10" ry="5" fill="#e3b6a5" opacity=".65" stroke="none"/><ellipse cx="153" cy="139" rx="10" ry="5" fill="#e3b6a5" opacity=".65" stroke="none"/>
+<path d="M105 140q7-6 14 0l-7 7Z" fill="#c58f84" stroke="#a87971" stroke-width="1.4"/><path d="M112 147v5m-9 0q5 6 9 0 5 6 10 0" fill="none" stroke-width="1.4"/>
+<path d="m58 138-18-4m20 11-20 1m124-8 18-4m-21 11 20 1" stroke="#9e8874" stroke-width="1.2"/>
+<path d="M48 161q-12 32 13 47m179-45q11 33-13 47" fill="none" stroke="#b39779" stroke-width="1"/>
+<path d="M45 149C40 102 71 70 112 74C165 65 194 129 180 180Q184 228 112 231Q40 229 45 149Z" fill="url(#pencil)" stroke="none"/>
+</g></svg>

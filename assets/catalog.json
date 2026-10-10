@@ -147,6 +147,102 @@
         "plant",
         "blanket"
       ]
+    },
+    {
+      "id": "character.rodent.mouse.v1",
+      "name": "小灰鼠",
+      "type": "svg",
+      "version": 1,
+      "path": "assets/characters/rodents/v1/mouse.svg",
+      "sha256": "325805db9f644d511250d55791f3852a66a8bbc0091ba921f75b2208d2929900",
+      "dimensions": [
+        224,
+        256
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "character.rodent.hamster.v1",
+      "name": "奶油仓鼠",
+      "type": "svg",
+      "version": 1,
+      "path": "assets/characters/rodents/v1/hamster.svg",
+      "sha256": "9e021f7c460162ee84549b1c76d5e947bd00cf6bb6e2b8055da8ab5753aae35f",
+      "dimensions": [
+        224,
+        256
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "character.rodent.golden.v1",
+      "name": "金丝熊",
+      "type": "svg",
+      "version": 1,
+      "path": "assets/characters/rodents/v1/golden.svg",
+      "sha256": "d65dca2f87156ee72f121c0c3ab513c2bc9e85e75b1409a0e51d043d9c889d39",
+      "dimensions": [
+        224,
+        256
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "character.cat-ranger.back.v1",
+      "name": "泡泡枪小猫",
+      "type": "svg",
+      "version": 1,
+      "path": "assets/characters/cat-ranger/v1/back.svg",
+      "sha256": "3eb37adcb2b803caab5f313b8cb6ed77097d711104822bc565226c9d4c8475c4",
+      "dimensions": [
+        160,
+        200
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "background.lane-road.v1",
+      "name": "纸上小路",
+      "type": "svg",
+      "version": 1,
+      "path": "assets/scenes/lane-road/v1/road.svg",
+      "sha256": "b18d8feeb590ba0ae78cb89adac6f8b50e838826af699d8add43ba610697e008",
+      "dimensions": [
+        400,
+        800
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ]
+    },
+    {
+      "id": "prop.upgrade-crate.v1",
+      "name": "补给木箱",
+      "type": "svg",
+      "version": 1,
+      "path": "assets/props/upgrade-crate/v1/crate.svg",
+      "sha256": "a2270b5f4673e2511b34ed8401e3ea97e324749bf6286bfa4ca36f7936675e7d",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ]
     }
   ]
 }

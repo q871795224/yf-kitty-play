@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#f7f1e5"><title>泡泡小队 · 双线突围</title><link rel="icon" href="data:,"><link rel="stylesheet" href="style.css"></head>
+<body><main id="app"><canvas id="field" aria-label="射击场景：拖动小猫左右移动，自动发射泡泡"></canvas>
+<header><a href="../incremental/" aria-label="返回猫猫小屋">⌂</a><div class="score"><small>本局得分</small><strong id="score">0</strong></div><div id="lives" aria-label="3颗爱心">♥ ♥ ♥</div><button id="pause" aria-label="暂停游戏" disabled>Ⅱ</button></header>
+<div id="boss" hidden><span>金丝熊队长</span><progress max="180" value="180"></progress></div>
+<p id="toast" role="status"></p><footer><div><small>泡泡枪</small><strong id="weapon">单发 · 4 / 秒</strong></div><span id="timer">00:00</span></footer>
+<section id="cover"><div class="card"><p class="eyebrow">纸上冒险 · 第一关</p><h1>泡泡小队</h1><p class="subtitle">守住小路，鼠鼠来啦！</p><div class="cast" aria-hidden="true"></div><p id="description">左右拖动小猫，泡泡自动发射。<br>打破补给箱，升级泡泡枪。</p><button id="start" class="primary" disabled>准备素材中…</button><small id="record">最好成绩 · 0</small></div></section>
+</main><script type="module" src="app.js"></script></body></html>
